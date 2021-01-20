@@ -1,12 +1,15 @@
 name: OpenWrt for x86
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'CHANGELOG.md'
-      - '.github/workflows/x86-OpenWrt.yml'
+on: 
+  # push: 
+  #   branches:
+  #     - main
+  # paths:
+  #     - 'CHANGELOG.md'
+  #     - '.github/workflows/x86-OpenWrt.yml'
+  #schedule:
+  #  - cron: 30 13 * * 6
+  workflow_dispatch:
 
 env:
   UPLOAD_FIRMWARE: true
