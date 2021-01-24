@@ -8,14 +8,9 @@
 
 name: Build OpenWrt
 
-on: 
-  # push: 
-  #   branches:
-  #     - master
-  schedule:
-    - cron: 0 16 * * 6
-  watch:
-    types: started
+on:
+  repository_dispatch:
+  workflow_dispatch:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
