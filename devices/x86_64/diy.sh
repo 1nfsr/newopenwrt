@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sed -i "s/+luci\( \|$\)//g"  package/*/*/*/Makefile
+
 echo '
 CONFIG_CRYPTO_CHACHA20_X86_64=y
 CONFIG_CRYPTO_POLY1305_X86_64=y
