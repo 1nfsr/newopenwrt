@@ -26,11 +26,13 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 rm -rf /tmp/luci-*
 
 if [ ! -f /etc/config/placeholder ]; then
-  sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' /etc/shadow
-  uci set network.lan.ipaddr="10.0.0.1"
-  uci set network.lan.ifname="eth1"
-  uci set network.wan.ifname="eth0"
-  uci set network.wan.proto=pppoe
+  sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
+  uci set network.lan.ipaddr="192.168.77.1"
+  uci set network.wan.proto=static
+  uci set network.wan.ipaddr=192.168.1.7
+  uci set network.wan.netmask=255.255.255.0
+  uci set network.wan.gateway=192.168.1.1
+  uci set network.wan.dns='114.114.114.114 8.8.4.4'
   uci commit network
   
   uci set shadowsocksr.@global[0].pdnsd_enable='0'
