@@ -74,6 +74,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         mkdir -p openwrt/package/base-files/files/etc/nginx
         cp -rf etc/nginx/conf.d openwrt/package/base-files/files/etc/nginx/
+        mv patch/* openwrt/
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH

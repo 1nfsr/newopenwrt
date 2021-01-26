@@ -13,8 +13,6 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/a
 
 
 # patch dnsmasq
-wget -q https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/dnsmasq-add-filter-aaaa-option.patch
-wget -q https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/luci-add-filter-aaaa-option.patch
 wget -P package/network/services/dnsmasq/patches/ https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/900-add-filter-aaaa-option.patch
 patch -p1 < ./dnsmasq-add-filter-aaaa-option.patch
 patch -p1 < ./luci-add-filter-aaaa-option.patch
@@ -30,7 +28,6 @@ mkdir package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/project-openwrt/openwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
 
 # Patch LuCI 增添fullcone开关
-wget -q https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/luci-app-firewall_add_fullcone.patch
 patch -p1 < ./luci-app-firewall_add_fullcone.patch
 
 # FullCone 相关组件
@@ -44,7 +41,6 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5
 popd
 
 # Patch LuCI 增添SFE开关
-wget -q https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/luci-app-firewall_add_sfe_switch.patch
 patch -p1 < ./luci-app-firewall_add_sfe_switch.patch
 
 # SFE 相关组件
