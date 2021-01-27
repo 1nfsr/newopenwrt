@@ -44,13 +44,17 @@ popd
 #patch -p1 < ./luci-app-firewall_add_sfe_switch.patch
 
 # SFE 相关组件
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/lean/shortcut-fe
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/lean/shortcut-fe
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/fast-classifier package/lean/fast-classifier
-wget -P package/base-files/files/etc/init.d/ https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/duplicate/shortcut-fe
+#wget -P package/base-files/files/etc/init.d/ https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/duplicate/shortcut-fe
 
 # luci-app-sfe
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe ./package/lean/luci-app-sfe
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt ./package/lean/pdnsd-alt
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe ./package/lean/luci-app-sfe
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt ./package/lean/pdnsd-alt
+
+svn co https://github.com/garypang13/openwrt-packages/trunk/luci-app-turboacc ./package/lean/luci-app-turboacc
+svn co https://github.com/garypang13/openwrt-packages/trunk/shortcut-fe ./package/lean/shortcut-fe
+
 
 # dockerman
 sed -i 's/+docker/+dockerd/g' ./feeds/luci/applications/luci-app-dockerman/Makefile
