@@ -24,11 +24,11 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5
 popd
 
 # Patch FireWall 增添fullcone功能
-mkdir package/network/config/firewall/patches
-wget -P package/network/config/firewall/patches/ https://github.com/project-openwrt/openwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
+#mkdir package/network/config/firewall/patches
+#wget -P package/network/config/firewall/patches/ https://github.com/project-openwrt/openwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
 
 # Patch LuCI 增添fullcone开关
-patch -p1 < ./luci-app-firewall_add_fullcone.patch
+#patch -p1 < ./luci-app-firewall_add_fullcone.patch
 
 # FullCone 相关组件
 svn co https://github.com/Lienol/openwrt/trunk/package/network/fullconenat ./package/network/fullconenat
@@ -41,7 +41,7 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5
 popd
 
 # Patch LuCI 增添SFE开关
-patch -p1 < ./luci-app-firewall_add_sfe_switch.patch
+#patch -p1 < ./luci-app-firewall_add_sfe_switch.patch
 
 # SFE 相关组件
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe package/lean/shortcut-fe
