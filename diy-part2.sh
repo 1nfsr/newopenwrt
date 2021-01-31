@@ -11,6 +11,8 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/ap
 #openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/apps/luci-app-openclash
 
+# 添加 r8168驱动
+git clone https://github.com/BROBIRD/openwrt-r8168 package/apps/openwrt-r8168
 
 # patch dnsmasq
 #wget -P package/network/services/dnsmasq/patches/ https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/900-add-filter-aaaa-option.patch
