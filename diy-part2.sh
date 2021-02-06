@@ -14,6 +14,9 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/a
 # 添加 r8168驱动
 git clone https://github.com/BROBIRD/openwrt-r8168 package/apps/openwrt-r8168
 
+# 添加 luci-theme-opentomcat
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat package/apps/luci-theme-opentomcat
+
 # patch dnsmasq
 #wget -P package/network/services/dnsmasq/patches/ https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/raw/master/PATCH/new/package/900-add-filter-aaaa-option.patch
 #patch -p1 < ./dnsmasq-add-filter-aaaa-option.patch
