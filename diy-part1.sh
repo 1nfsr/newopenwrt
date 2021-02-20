@@ -19,3 +19,6 @@ sed -i '/%D/a\ Infsr Build' package/base-files/files/etc/banner
 
 # change shells
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+
+# fix login
+sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/usr/libexec/login.sh
