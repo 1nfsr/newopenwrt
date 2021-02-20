@@ -16,3 +16,6 @@ sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 sed -i '/DISTRIB_DESCRIPTION/d' package/base-files/files/etc/openwrt_release
 sed -i "$ a\DISTRIB_DESCRIPTION='Built by Infsr($(date +%Y.%m.%d))@%D %V %C'" package/base-files/files/etc/openwrt_release
 sed -i '/%D/a\ Infsr Build' package/base-files/files/etc/banner
+
+# change shells
+sed -i 's/ash/zsh/g' package/base-files/files/etc/passwd
