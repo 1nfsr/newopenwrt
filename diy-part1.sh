@@ -18,4 +18,4 @@ sed -i "$ a\DISTRIB_DESCRIPTION='Built by Infsr($(date +%Y.%m.%d))@%D %V %C'" pa
 sed -i '/%D/a\ Infsr Build' package/base-files/files/etc/banner
 
 # change shells
-sed -i 's/ash/zsh/g' package/base-files/files/etc/passwd
+sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
