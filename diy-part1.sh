@@ -21,7 +21,7 @@ sed -i '/%D/a\ Infsr Build' package/base-files/files/etc/banner
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # fix login
-#sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/usr/libexec/login.sh
+sed -i 's/ash/bash/g' package/base-files/files/usr/libexec/login.sh
 #
 #::askconsole:/usr/libexec/login.sh package/base-files/files/etc/inittab
-sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
+#sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
