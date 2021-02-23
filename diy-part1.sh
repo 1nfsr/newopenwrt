@@ -35,4 +35,5 @@ sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' target/l
 cp target/linux/generic/config-5.10 target/linux/x86/
 cp target/linux/generic/config-5.10 target/linux/x86/generic/
 cp target/linux/generic/config-5.10 target/linux/x86/64/
+cp -r target/linux/x86/patches-5.4 target/linux/x86/patches-5.10
 
