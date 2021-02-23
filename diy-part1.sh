@@ -32,3 +32,7 @@ sed -i 's/ash/bash/g' package/base-files/files/etc/shells
 
 #use 5.10kernel
 sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' target/linux/x86/Makefile
+cp target/linux/generic/config-5.10 target/linux/x86/
+cp target/linux/generic/config-5.10 target/linux/x86/generic/
+cp target/linux/generic/config-5.10 target/linux/x86/64/
+
