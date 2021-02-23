@@ -29,3 +29,6 @@ sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
 echo 'kernel.printk=0 4 1 7' >> package/base-files/files/etc/sysctl.conf
 
 sed -i 's/ash/bash/g' package/base-files/files/etc/shells
+
+#use 5.10kernel
+sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' target/linux/x86/Makefile
