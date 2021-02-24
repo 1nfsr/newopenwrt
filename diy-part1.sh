@@ -31,9 +31,7 @@ echo 'kernel.printk=0 4 1 7' >> package/base-files/files/etc/sysctl.conf
 sed -i 's/ash/bash/g' package/base-files/files/etc/shells
 
 #use 5.10kernel
-sed -i 's/5.4/5.10/g' target/linux/x86/Makefile
-cp target/linux/generic/config-5.10 target/linux/x86/
-cp target/linux/generic/config-5.10 target/linux/x86/generic/
-cp target/linux/generic/config-5.10 target/linux/x86/64/
-cp -r target/linux/x86/patches-5.4 target/linux/x86/patches-5.10
+#sed -i 's/5.4/5.10/g' target/linux/x86/Makefile
+#cp target/linux/generic/config-5.10 target/linux/x86/64/
+#cp -r target/linux/patch target/linux/x86/patches-5.10
 
