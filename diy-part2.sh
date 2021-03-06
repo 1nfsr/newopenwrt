@@ -65,5 +65,5 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat package/apps/luci-t
 sed -i 's/+docker/+dockerd/g' ./feeds/luci/applications/luci-app-dockerman/Makefile
 
 #fix
-rm -rf feeds/packages/utils/bash
-svn co https://github.com/coolsnowwolf/packages/trunk/utils/bash feeds/packages/utils/bash
+#rm -rf feeds/packages/utils/bash
+#svn co https://github.com/coolsnowwolf/packages/trunk/utils/bash feeds/packages/utils/bash
