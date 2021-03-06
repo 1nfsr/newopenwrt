@@ -21,14 +21,19 @@ sed -i '/%D/a\ Infsr Build' package/base-files/files/etc/banner
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # fix login
-sed -i 's/ash/bash/g' package/base-files/files/usr/libexec/login.sh
+#sed -i 's/ash/bash/g' package/base-files/files/usr/libexec/login.sh
 #
 #::askconsole:/usr/libexec/login.sh package/base-files/files/etc/inittab
-sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
+#sed -i 's/::askconsole/#::askconsole/g' package/base-files/files/etc/inittab
 #
-echo 'kernel.printk=0 4 1 7' >> package/base-files/files/etc/sysctl.conf
+#echo 'kernel.printk=0 4 1 7' >> package/base-files/files/etc/sysctl.conf
 
-sed -i 's/ash/bash/g' package/base-files/files/etc/shells
+#sed -i 's/ash/bash/g' package/base-files/files/etc/shells
+
+sed -i 's/\/usr\/libexec\/login.sh/\/bin\/login/g' package/base-files/files/etc/inittab
+echo "ttyS0::askfirst:/bin/login" >> package/base-files/files/etc/inittab
+echo "tty1::askfirst:/bin/login" >> package/base-files/files/etc/inittab
+
 
 #use 5.10kernel
 #sed -i 's/5.4/5.10/g' target/linux/x86/Makefile
